@@ -12,10 +12,5 @@ module.exports.routes = {
 
   'POST /user/signup': 'user/SignUpController.signup',
   'POST /user/login': 'user/LoginController.login',
-  'POST /locacion/create': 'locacion/AddLocacionController.addLocacion',
-  'POST /venta/create': 'venta/AddVentaController.addVenta',
-  'POST /ventaxlocacion/create': 'venta/AddVentaxLocacionController.addVentaxLocacion',
-  'GET /venta/list/:id': 'venta/ListVentasController.listVentas',
-  'POST /locacion/list': 'locacion/ListLocacionController.listLocacion'
 
 };
