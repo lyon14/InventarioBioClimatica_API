@@ -12,5 +12,8 @@ module.exports.routes = {
 
   'POST /user/signup': 'user/SignUpController.signup',
   'POST /user/login': 'user/LoginController.login',
-
+  'POST /objeto/add': 'objeto/AddObjetoController.addObjeto',
+  'GET /objeto/list': 'objeto/ListObjetosController.listObjetos',
+  'POST /comentario/add': 'comentario/AddComentarioController.addComentario',
+  'GET /comentario/list': 'comentario/ListComentariosController.listComentarios',
 };

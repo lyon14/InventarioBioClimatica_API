@@ -18,12 +18,11 @@ module.exports = {
       name: joi.string().required(),
       email: joi.string().email().required(),
       password: joi.string().required(),
-      telefono: joi.string().required(),
     });
 
     const { name, email, telefono, password } = await schema.validateAsync(req.body);
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = await Usuario.create({ name, email, telefono, password: hashedPassword }).fetch();
+    const user = await Usuario.create({ name, email, password: hashedPassword }).fetch();
     return res.ok(user);
 
   } catch (error) {
