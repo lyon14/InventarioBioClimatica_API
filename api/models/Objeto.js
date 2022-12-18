@@ -15,7 +15,9 @@ module.exports = {
     descripcion: {
       type: 'string',
     },
-
+    imagen: {
+      type: 'string',
+    }
   },
 
 };

@@ -16,10 +16,11 @@ module.exports = {
       const schema = joi.object().keys({
         nombre: joi.string().required(),
         descripcion: joi.string().required(),
+        imagen: joi.string().required(),
       });
 
-      const { nombre, descripcion } = await schema.validateAsync(req.body);
-      const objeto = await Objeto.create({ nombre, descripcion }).fetch();
+      const { nombre, descripcion, imagen } = await schema.validateAsync(req.body);
+      const objeto = await Objeto.create({ nombre, descripcion, imagen }).fetch();
       return res.ok(objeto);
 
     } catch (error) {
